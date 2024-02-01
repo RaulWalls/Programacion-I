@@ -20,15 +20,15 @@ int main()
     }
     for(int i = menor; i <= mayor; i++){    //asigna a i el valor del numero menor para que comience
                                             //desde ese numero hasta llegar al numero mayor
-        if(i%2 == 0){                       //compara si la iteración es par
-            par++; //incrementa el total de números pares
+        if(i%2 == 0){                       //compara si la iteraciÃ³n es par
+            par++; //incrementa el total de nÃºmeros pares
         }
         if(i%2 == 1){
-            impar++; //incrementa el total de números impares
+            impar++; //incrementa el total de nÃºmeros impares
         }
     }
-    cout << "El total de números pares entre " << menor << " y " << mayor <<" es: " << par << endl;
-    cout << "El total de números impares entre " << menor << " y " << mayor <<" es: " << impar << endl;
+    cout << "El total de nÃºmeros pares entre " << menor << " y " << mayor <<" es: " << par << endl;
+    cout << "El total de nÃºmeros impares entre " << menor << " y " << mayor <<" es: " << impar << endl;
 
     return 0;
 }
