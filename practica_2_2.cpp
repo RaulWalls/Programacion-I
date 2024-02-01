@@ -21,7 +21,7 @@ int main()
     }
     for(int i = menor; i <= mayor; i++){    //asigna a i el valor del numero menor para que comience
                                             //desde ese numero hasta llegar al numero mayor
-        if(i%2 == 0){       //compara si la iteración es par
+        if(i%2 == 0){       //compara si la iteraciÃ³n es par
             cout << i << " "; //si lo es imprime el valor mas  un espacio en blanco
         }
     }
