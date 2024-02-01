@@ -9,7 +9,7 @@ int main()
     cout << "Inrgesa el numero:" << endl;
     cin >> num;
 
-    if ( num == 0){             //valida el valor ingresado con 0 para evitar la división
+    if ( num == 0){             //valida el valor ingresado con 0 para evitar la divisiÃ³n
             digitos = 1;
     }else{
         while(num > 0){         //compara el valor ingresado entre cero, mientras sea cierto
