@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     int calificacion;
-    cout << "Programa que calcula una calificacion del sistema numérico al sistema Americano.";
+    cout << "Programa que calcula una calificacion del sistema numÃ©rico al sistema Americano.";
     cout << "Dame tu calificacion en rango de 0-100:";
     cin >> calificacion;
 
@@ -25,7 +25,7 @@ int main()
         cout << "La calificacion es F";
     }
     if (calificacion > 100)}{                           //Alerta de que la calificacion capturada es incorrecta
-        cout << "¡Error de calificacion!";
+        cout << "Â¡Error de calificacion!";
     }
 
     return 0;
