@@ -6,7 +6,7 @@ int main()
 {
     int numero, pos1=0, pos2=1, serie=1;
     cout << "Programa que imprime al usuario el valor de la serie de Fibonacci a partir de un numero ingresado" << endl;
-    cout << "Ingresa un número para calcular el valor de la serie Fibonacci:";
+    cout << "Ingresa un nÃºmero para calcular el valor de la serie Fibonacci:";
     cin >> numero;
 
     cout << "0, 1, ";
