@@ -11,6 +11,7 @@ Prácticas de la materia de Programación I de conocimientos básicos en program
 - Practica 3.2 - Total de digitos de un numero asignado por el usuario.
 - Practica 3.3 - Validación entre dos contraseñas.
 - Practica 3.4 - Imprimir el número de pares e impares que se encuentran entre dos números.
+- Practica 4   - Cajero automático que permite ingresar cinco usuarios, consultar saldo, hacer retiros.
 
 ## Tecnologías
 - C++
