@@ -11,14 +11,14 @@ int main()
     cout << "Programa que suma dos matrices e imprime el resultado" << endl;
     sleep(2);
     cout << "Recuerda que para multiplicar dos matrices es necesario que\nel numero de columnas de M1 debe ser igual al numero de filas de M2." << endl;
-    sleep(2);
+    sleep(4);
 
     do{
-        cout << "Ingresa el tamanio de la Matriz 1:" << endl;
+        cout << "\nIngresa el tamanio de la Matriz 1:" << endl;
         cin >> a;
         cout << "X\n";
         cin >> b;
-        cout << "\n\nIngresa el tamanio de la Matriz 2: " << endl;
+        cout << "Ingresa el tamanio de la Matriz 2: " << endl;
         cin >> c;
         cout << "X\n";
         cin >> d;
@@ -38,23 +38,32 @@ int main()
     int matriz2[c][d];
 
     cout << "INGRESO DE DATOS DE LA PRIMER MATRIZ:" << endl;
-    for(int i = 0; i <= a; i++){
-        for(int j = 0; j <= b; j++){
+    for(int i = 0; i < a; i++){
+        for(int j = 0; j < b; j++){
             cout << "Ingresar valor para [" << i << "][" << j << "]: " << endl;
             cin >> matriz1[i][j];
         }
     }
 
     cout << "INGRESO DE DATOS DE LA SEGUNDA MATRIZ:" << endl;
-    for(int i = 0; i <= c; i++){
-        for(int j = 0; j <= d; j++){
+    for(int i = 0; i < c; i++){
+        for(int j = 0; j < d; j++){
             cout << "Ingresar valor para [" << i << "][" << j << "]: " << endl;
             cin >> matriz2[i][j];
         }
     }
     int matrizR[a][d];
-
+    int aux = 0;
     cout << "CALCULANDO MATRIZ...  " << endl;
+
+    for (int i = 0; i < a; i++){
+        for (int j = 0; j < d; j++){
+            for (int k = 0; k < c; k++){
+                matrizR[i][j] += matriz1[i][k] * matriz2[k][j];
+            }
+        }
+    }
+
     sleep(1);
     cout << ".";
     sleep(1);
@@ -63,17 +72,17 @@ int main()
     cout << ".";
     sleep(1);
     system("cls");
+
+
     cout << "LA MATRIZ RESULTADO ES: " << endl;
 
-    for (int i = 0; i < a; i++){
-        for (int j = 0; j < d; j++){
-            if(j==d){
-                cout << matrizR[i][j] << " ";
-            }else{
-                cout << matrizR[i][j] << endl;
-            }
+    for(int i = 0; i < a; i++){
+        for(int j = 0; j < d; j++){
+            cout << matrizR[i][j] << " ";
         }
+        cout << endl;
     }
+
 
     return 0;
 }
