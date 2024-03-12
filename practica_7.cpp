@@ -7,59 +7,51 @@ using namespace std;
 
 int main()
 {
-    int a, b, c, d, x = 2;
-    cout << "Programa que suma dos matrices e imprime el resultado" << endl;
-    sleep(2);
+    int a, b, c;
+    int matrizA[20][20], matrizB[20][20], matrizC[20][20];
+    cout << "Programa que suma dos matrices e imprime el resultado." << endl;
+    sleep(4);
     cout << "Recuerda que para multiplicar dos matrices es necesario que\nel numero de columnas de M1 debe ser igual al numero de filas de M2." << endl;
     sleep(4);
 
-    do{
-        cout << "\nIngresa el tamanio de la Matriz 1:" << endl;
+        cout << "\nIngresa las filas de la Matriz A: ";
         cin >> a;
-        cout << "X\n";
+        cout << "Ingresa las columnas de la Matriz A:";
         cin >> b;
-        cout << "Ingresa el tamanio de la Matriz 2: " << endl;
+        cout << "El numero de filas de la matriz B es igual a las columnas de la matriz A: " << b << endl;
+        cout << "Ingresa las columnas de la Matriz B:";
         cin >> c;
-        cout << "X\n";
-        cin >> d;
-        if (b == c){
-            cout << "La matriz es valida!\n";
-            sleep(2);
-            x = 1;
-            system("cls");
-        }else{
-            cout << "La no matriz es valida!\n";
-            sleep(2);
-        }
-    }while(x != 1);
-
-
-    int matriz1[a][b];
-    int matriz2[c][d];
 
     cout << "INGRESO DE DATOS DE LA PRIMER MATRIZ:" << endl;
     for(int i = 0; i < a; i++){
         for(int j = 0; j < b; j++){
             cout << "Ingresar valor para [" << i << "][" << j << "]: " << endl;
-            cin >> matriz1[i][j];
+            cin >> matrizA[i][j];
         }
     }
 
+
     cout << "INGRESO DE DATOS DE LA SEGUNDA MATRIZ:" << endl;
-    for(int i = 0; i < c; i++){
-        for(int j = 0; j < d; j++){
+    for(int i = 0; i < b; i++){
+        for(int j = 0; j < c; j++){
             cout << "Ingresar valor para [" << i << "][" << j << "]: " << endl;
-            cin >> matriz2[i][j];
+            cin >> matrizB[i][j];
         }
     }
-    int matrizR[a][d];
-    int aux = 0;
+
+    for(int i=0; i<a; ++i){
+        for(int j=0; j<c; ++j){
+            matrizC[i][j] = 0;
+        }
+    }
+
+    int matrizR[10][10];
     cout << "CALCULANDO MATRIZ...  " << endl;
 
     for (int i = 0; i < a; i++){
-        for (int j = 0; j < d; j++){
-            for (int k = 0; k < c; k++){
-                matrizR[i][j] += matriz1[i][k] * matriz2[k][j];
+        for (int j = 0; j < c; j++){
+            for (int k = 0; k < b; k++){
+                matrizC[i][j] += matrizA[i][k] * matrizB[k][j];
             }
         }
     }
@@ -76,9 +68,10 @@ int main()
 
     cout << "LA MATRIZ RESULTADO ES: " << endl;
 
+
     for(int i = 0; i < a; i++){
-        for(int j = 0; j < d; j++){
-            cout << matrizR[i][j] << " ";
+        for(int j = 0; j < c; j++){
+            cout << matrizC[i][j] << " ";
         }
         cout << endl;
     }
